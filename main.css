@@ -1,0 +1,104 @@
+body{
+	background: url(img/bg-abstract-006.jpg) no-repeat;
+	-webkit-background-size:  cover;
+	background-size:  cover;
+
+}
+a{
+	text-decoration: none;
+}
+.container{
+	display: flex;
+	flex-direction: column;
+	font-family: sans-serif;
+	margin: 50px auto 0 auto;
+	max-width: 1000px;
+
+}
+h1{
+	text-align: center;
+	font-size: 50px;
+
+}
+
+h1 span{
+	color: #fff;
+}
+
+.title-img{
+	width: 40px;
+	margin-right: 10px;
+}
+
+
+
+form{
+	margin-bottom: 20px;
+}
+
+
+th{
+	font-weight: 700;
+	text-align: left;
+
+}
+label{
+	display: block;
+	font-size: 20px;
+	color: #331023;
+}
+
+
+.form-control{
+	width: 99%;
+	font-size: 20px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+
+
+.alert-danger, .alert-success{
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #fff;
+	width: 99%;
+	margin-bottom: 10px;
+	padding: 5px 0 5px 0;
+	background-color: red;
+	border-radius: 5px; 
+}
+.alert-success{
+	background-color: green;
+
+}
+.wrap{
+	display: flex;
+	justify-content: flex-end;
+	width: 99%;
+}
+
+.bth-primary{
+	background-color: #507799;
+	color : white;
+	font-size: 20px;
+	border: 0;
+	padding: 5px 10px 5px 10px; 
+}
+tr{
+	font-size: 20px;
+}
+.btn-sm{
+
+}
+
+.edit{
+	color: green;
+	
+}
+.delete{
+	color: red;
+	font-size: 30px;
+}
