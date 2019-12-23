@@ -87,8 +87,13 @@ label{
 	border: 0;
 	padding: 5px 10px 5px 10px; 
 }
+table{
+	width: 100%;
+}
+
 tr{
 	font-size: 20px;
+	
 }
 .btn-sm{
 

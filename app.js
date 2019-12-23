@@ -1,5 +1,5 @@
 
-    // Class: представляющий задачу
+ 
 class Todo {
     constructor(task, description, priority) {
         this.task = task;
@@ -8,7 +8,7 @@ class Todo {
     }
 }
  
-// UI Class: Handle UI Tasks Обрабатывать задачи пользовательского интерфейса
+
 class UI {
     static displayTodos() {
         const todos = Store.getTodos();
@@ -59,7 +59,7 @@ class UI {
         const form = document.querySelector('#todo-form');
         container.insertBefore(div, form);
  
-    // Vanish in 2 seconds
+    
     setTimeout(() => document.querySelector('.alert').remove(), 2000);
 }
  
@@ -73,7 +73,7 @@ class UI {
     }
 }
  
-// Store Class: Handle Storage Класс магазина: Ручка для хранения
+
 class Store {
     static getTodos() {
         let todos;
@@ -101,22 +101,21 @@ class Store {
     }
 }
  
-// Event: Display Todos Событие: показ книг
-document.addEventListener('DOMContentLoaded', UI.displayTodos);
- 
-// Event: Add a Todo Событие: добавить книгу
+
+document.addEventListener('DOMContentLoaded', UI.displayTodos); 
+
 document.querySelector('#todo-form').addEventListener('submit', (e) => {
-    // Prevent actual submit
+    
     e.preventDefault();
  
-//Get from value Получить из стоимости
+
 const task = document.querySelector('#task').value;
 const description = document.querySelector('#description').value;
 const priority = document.querySelector('#priority').value;
  
 const btn = document.querySelector('#todo-form [type="submit"]');
 const index = btn.dataset.index;
-// Validate утверждать
+
 if(task === '' || description === '' || priority === '') {
     UI.showAlert('Пожалуйста введите данные', 'danger');
 }
@@ -131,24 +130,20 @@ else if(index !== void 0){
 }
  
 else {
-    // Instatiate Todo Книга с описанием
+    
     const todo = new Todo(task, description, priority);
  
-    // Add Todo to UI Добавить книгу в пользовательский интерфейс
-    UI.addTodoToList(todo);
- 
-    // Add Todo to store Добавить книгу в магазин
-    Store.addTodo(todo);
- 
-    //Show success message Показать сообщение об успехе
-    UI.showAlert('Задача добавлена', 'success');
- 
-    // Clear fields Очистить поля
+    
+    UI.addTodoToList(todo); 
+    
+    Store.addTodo(todo); 
+    
+    UI.showAlert('Задача добавлена', 'success'); 
+    
     UI.clearFields();
 }
-});
- 
-// Event: Remove a Todo Событие: удалить книгу
+}); 
+
 document.querySelector('#todo-list').addEventListener('click', (e) => {
     UI.deleteTodo(e.target);
     UI.editTodo(e.target);
